@@ -37,6 +37,7 @@ def movies_with_director_key(name, movies_collection)
   movies_with_name = []
   i = 0 
   while i < movies_collection.length do
+  
     movies_with_name.push(movie_with_director_name(name, movies_collection[i]))
     i +=1 
   end
@@ -50,10 +51,11 @@ def gross_per_studio(collection)
   i = 0 
   
   while i < collection.length do 
-    if !gross_earnings[collection[i][:studio]]
-      gross_earnings[collection[i][:studio]] = collection[i][:worldwide_gross]
-    else 
+    if gross_earnings[collection[i][:studio]
       gross_earnings[collection[i][:studio]] += collection[i][:worldwide_gross]
+      
+    else 
+      gross_earnings[collection[i][:studio]] = collection[i][:worldwide_gross]
     end 
     i += 1 
     
